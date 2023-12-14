@@ -46,12 +46,12 @@ const NewRoom = () => {
       errors.roomNumbers = "At least one room number is required!";
     } else {
       // Additional validation for roomNumbers array
-      formData.roomNumbers.forEach((roomNumber, index) => {
-        if (!roomNumber.number) {
-          errors[`roomNumbers[${index}].number`] = "Room number is required!";
-        }
-        // Add more validation rules for roomNumbers if needed
-      });
+      // formData.roomNumbers.forEach((roomNumber, index) => {
+      //   if (!roomNumber.number) {
+      //     errors[`roomNumbers[${index}].number`] = "Room number is required!";
+      //   }
+      //   // Add more validation rules for roomNumbers if needed
+      // });
     }
 
     setErrors(errors);
