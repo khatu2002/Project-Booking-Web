@@ -11,52 +11,52 @@ const List = () => {
   const rows = [
     {
       id: 1143155,
-      product: "Acer Nitro 5",
-      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
+      product: "Hotel California New",
+      img: "https://loscabosmexicoblog.com/wp-content/uploads/2016/04/Hotel-California-los-cabos.jpg",
+      customer: "Thuy Duong",
+      date: "4 December",
       amount: 785,
-      method: "Cash on Delivery",
+      method: "Cash",
       status: "Approved",
     },
     {
       id: 2235235,
-      product: "Playstation 5",
-      img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Michael Doe",
-      date: "1 March",
+      product: "Hotel Jan",
+      img: "https://media-cdn.tripadvisor.com/media/photo-s/05/ef/80/12/hotel-majestic-saigon.jpg",
+      customer: "Emily Cooper",
+      date: "25 November",
       amount: 900,
       method: "Online Payment",
       status: "Pending",
     },
     {
       id: 2342353,
-      product: "Redragon S101",
-      img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 35,
-      method: "Cash on Delivery",
+      product: "Hotel Minik",
+      img: "https://artishotel.vn/wp-content/uploads/2021/12/artishotel.png",
+      customer: "London Tipton",
+      date: "19 November",
+      amount: 600,
+      method: "Cash",
       status: "Pending",
     },
     {
       id: 2357741,
-      product: "Razer Blade 15",
-      img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Jane Smith",
-      date: "1 March",
+      product: "AOV Hotel",
+      img: "https://assets-global.website-files.com/619bb38c7dfe56fa47a49885/62655bc2660394946e065b2f_cohost-vn-khach-san-la-gi-12.png",
+      customer: "IU",
+      date: "12 November",
       amount: 920,
-      method: "Online",
+      method: "Online Payment",
       status: "Approved",
     },
     {
       id: 2342355,
-      product: "ASUS ROG Strix",
-      img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Harold Carol",
-      date: "1 March",
+      product: "Hotel Jolly",
+      img: "https://the-luxe-hotel-ho-chi-minh-city.hotelmix.vn/data/Photos/OriginalPhoto/12606/1260677/1260677746/The-Luxe-Hotel-Ho-Chi-Minh-City-Exterior.JPEG",
+      customer: "Kha Tu",
+      date: "30 October",
       amount: 2000,
-      method: "Online",
+      method: "Online Payment",
       status: "Pending",
     },
   ];
@@ -65,13 +65,13 @@ const List = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
-            <TableCell className="tableCell">Date</TableCell>
-            <TableCell className="tableCell">Amount</TableCell>
-            <TableCell className="tableCell">Payment Method</TableCell>
-            <TableCell className="tableCell">Status</TableCell>
+            <TableCell className="tableCell"><b>Payment ID</b></TableCell>
+            <TableCell className="tableCell"><b>Hotel</b></TableCell>
+            <TableCell className="tableCell"><b>Customer</b></TableCell>
+            <TableCell className="tableCell"><b>Date</b></TableCell>
+            <TableCell className="tableCell"><b>Amount</b></TableCell>
+            <TableCell className="tableCell"><b>Payment Method</b></TableCell>
+            <TableCell className="tableCell"><b>Status</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

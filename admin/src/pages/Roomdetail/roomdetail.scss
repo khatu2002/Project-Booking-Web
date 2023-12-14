@@ -1,38 +1,55 @@
-/* hotelDetail.scss */
+.rd-new {
+    width: 100%;
+    display: flex;
 
-// .hotelDetailsContainer {
-//     display: flex;
-//     justify-content: space-between;
-//     margin: 20px;
-//     padding: 10px;
-//     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-// }
+    .rd-newContainer {
+        flex: 6;
 
-// .hotelDetailsLeft img {
-//     width: 200px;
-//     height: 200px;
-//     border-radius: 50%;
-//     object-fit: cover;
-// }
-.new .newContainer .top .left img,
-.new .newContainer .bottom .left img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+        .rd-top,
+        .rd-bottom {
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+            padding: 10px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+
+            h1 {
+                color: lightgray;
+                font-size: 20px;
+            }
+
+            .rd-right {
+                flex: 2;
+                padding: 0px 20px;
+
+                form {
+                    .rd-formInput {
+                        margin-bottom: 15px;
+
+                        label {
+                            margin-bottom: 5px;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            padding: 5px;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            background-color: #f9f9f9;
+                            margin: 0;
+                        }
+
+                        div {
+                            margin-top: 10px;
+                            padding: 5px;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            background-color: #f9f9f9;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-
-// .hotelDetailsRight {
-//     max-width: 600px;
-//     padding: 0px 20px;
-
-h1 {
-    color: lightgray;
-    font-size: 20px;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-/* You can customize additional styles for specific elements */

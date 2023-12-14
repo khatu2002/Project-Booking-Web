@@ -147,7 +147,7 @@ const New = ({ inputs, title }) => {
 
               {inputs.map((input) => (
                 <div className="formInput" key={input.id}>
-                  <label>{input.label}</label>
+                  <label><b>{input.label}</b></label>
                   <input
                     onChange={handleChange}
                     type={input.type}

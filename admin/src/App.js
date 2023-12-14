@@ -1,10 +1,9 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
-import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { productInputs, userInputs } from "./formSource";
+import { hotelInputs, roomInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -16,6 +15,8 @@ import HotelDetail from "./pages/Hoteldetail/HotelDetail";
 import RoomDetail from "./pages/Roomdetail/RoomDetail";
 import UserDetail from "./pages/Userdetail/UserDetail";
 import UpdateUser from "./pages/updateuser/UpdateUser";
+import UpdateHotel from "./pages/updateHotel/UpdateHotel";
+import UpdateRoom from "./pages/updateRoom/updateRoom";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -96,6 +97,14 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route
+                path=":hotelId/update"
+                element={
+                  <ProtectedRoute>
+                    <UpdateHotel inputs={hotelInputs} title="Update Hotel" />
+                  </ProtectedRoute>
+                }
+              />
             </Route>
             <Route path="rooms">
               <Route
@@ -119,6 +128,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <NewRoom />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path=":roomId/update"
+                element={
+                  <ProtectedRoute>
+                    <UpdateRoom inputs={roomInputs} title="Update Room" />
                   </ProtectedRoute>
                 }
               />

@@ -123,15 +123,15 @@ const NewHotel = () => {
   };
 
   return (
-    <div className="new">
+    <div className="nh-new">
       <Sidebar />
-      <div className="newContainer">
+      <div className="nh-newContainer">
         <Navbar />
-        <div className="top">
+        <div className="nh-top">
           <h1>Add New Hotel</h1>
         </div>
-        <div className="bottom">
-          <div className="left">
+        <div className="nh-bottom">
+          <div className="nh-left">
             <img
               src={
                 files
@@ -141,11 +141,11 @@ const NewHotel = () => {
               alt=""
             />
           </div>
-          <div className="right">
+          <div className="nh-right">
             <form>
-              <div className="formInput">
+              <div className="nh-formInput">
                 <label htmlFor="file">
-                  Image: <DriveFolderUploadOutlinedIcon className="icon" />
+                  Image: <DriveFolderUploadOutlinedIcon className="nh-icon" />
                 </label>
                 <input
                   type="file"
@@ -157,8 +157,8 @@ const NewHotel = () => {
               </div>
 
               {hotelInputs.map((input) => (
-                <div className="formInput" key={input.id}>
-                  <label>{input.label}</label>
+                <div className="nh-formInput" key={input.id}>
+                  <label><b>{input.label}</b></label>
                   <input
                     id={input.id}
                     onChange={handleChange}
@@ -168,15 +168,15 @@ const NewHotel = () => {
                   {errors[input.id] && <p style={{ color: 'red' }}>{errors[input.id]}</p>}
                 </div>
               ))}
-              <div className="formInput">
-                <label>Featured</label>
+              <div className="nh-formInput">
+                <label><b>Featured</b></label>
                 <select id="featured" onChange={handleChange}>
                   <option value={false}>No</option>
                   <option value={true}>Yes</option>
                 </select>
               </div>
-              <div className="selectRooms">
-                <label>Rooms</label>
+              <div className="nh-selectRooms">
+                <label><b>Rooms </b></label>
                 <Select
                   id="rooms"
                   multiple

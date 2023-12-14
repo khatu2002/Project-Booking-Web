@@ -33,15 +33,15 @@ const HotelDetail = () => {
     }, [hotelId]);
 
     return (
-        <div className="new"> {/* You can adjust the class name as needed */}
+        <div className="hd-new"> {/* You can adjust the class name as needed */}
             <Sidebar />
-            <div className="newContainer"> {/* You can adjust the class name as needed */}
+            <div className="hd-newContainer"> {/* You can adjust the class name as needed */}
                 <Navbar />
-                <div className="top">
+                <div className="hd-top">
                     <h1>{entityData ? entityData.name : "Loading..."}</h1>
                 </div>
-                <div className="bottom">
-                    <div className="left">
+                <div className="hd-bottom">
+                    <div className="hd-left">
                         <img
                             src={
                                 entityData && entityData.photos && entityData.photos.length > 0
@@ -51,43 +51,42 @@ const HotelDetail = () => {
                             alt=""
                         />
                     </div>
-                    <div className="right">
+                    <div className="hd-right">
                         <form>
                             {entityData && (
                                 <>
-                                    <div className="formInput">
-                                        <label>Type</label>
+                                    <div className="hd-formInput">
+                                        <label><b>Type</b></label>
                                         <p>{entityData.type}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>City</label>
+                                    <div className="hd-formInput">
+                                        <label><b>City</b></label>
                                         <p>{entityData.city}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Address</label>
+                                    <div className="hd-formInput">
+                                        <label><b>Address</b></label>
                                         <p>{entityData.address}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Distance</label>
+                                    <div className="hd-formInput">
+                                        <label><b>Distance</b></label>
                                         <p>{entityData.distance} miles</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Rating</label>
+                                    <div className="hd-formInput">
+                                        <label><b>Rating</b></label>
                                         <p>{entityData.rating}/5</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Rooms</label>
+                                    <div className="hd-formInput">
+                                        <label><b>Rooms</b></label>
                                         <p>{roomNames.join(', ')}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Cheapest Price</label>
+                                    <div className="hd-formInput">
+                                        <label><b>Cheapest Price</b></label>
                                         <p>${entityData.cheapestPrice}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Featured</label>
+                                    <div className="hd-formInput">
+                                        <label><b>Featured</b></label>
                                         <p>{entityData.featured ? "Yes" : "No"}</p>
                                     </div>
-                                    {/* Add other fields similarly */}
                                 </>
                             )}
                         </form>

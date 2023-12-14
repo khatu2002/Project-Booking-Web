@@ -1,24 +1,89 @@
-.login {
+.loginWrapper {
+    display: flex;
     height: 100vh;
+}
+
+.leftPanel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.rightPanel {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.rightPanel img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 4em;
+        font-family: 'Bubblegum Sans', cursive;
+        color: #000000;
+        display: inline-block;
+    }
+}
+
+.registerLink {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #010101;
+}
+
+.registerLink span {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0071c2;
+}
+
 .lContainer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    align-items: center;
 }
 
 .lInput {
     height: 30px;
     padding: 10px;
+    padding-right: 30px;
+}
+
+.inputWrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
 }
 
 .lButton {
     border: none;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: #0071c2;
     color: white;
     font-weight: bold;

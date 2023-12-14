@@ -23,57 +23,53 @@ const RoomDetail = () => {
         fetchData();
     }, [roomId]);
 
+
     return (
-        <div className="new"> {/* Adjust the class name as needed */}
+        <div className="rd-new">
             <Sidebar />
-            <div className="newContainer"> {/* Adjust the class name as needed */}
+            <div className="rd-newContainer">
                 <Navbar />
-                <div className="top">
+                <div className="rd-top">
                     <h1>{roomData ? roomData.title : "Loading..."}</h1>
                 </div>
-                <div className="bottom">
-                    <div className="left">
-                        <img
-                            src={
-                                roomData && roomData.photos && roomData.photos.length > 0
-                                    ? roomData.photos[0]
-                                    : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
-                            }
-                            alt=""
-                        />
-                    </div>
-                    <div className="right">
+                <div className="rd-bottom">
+                    <div className="rd-right">
                         <form>
                             {roomData && (
                                 <>
-                                    <div className="formInput">
+                                    <div className="rd-formInput">
                                         <label>Title</label>
                                         <p>{roomData.title}</p>
                                     </div>
-                                    <div className="formInput">
+                                    <div className="rd-formInput">
                                         <label>Price</label>
                                         <p>${roomData.price}</p>
                                     </div>
-                                    <div className="formInput">
+                                    <div className="rd-formInput">
                                         <label>Max People</label>
                                         <p>{roomData.maxPeople}</p>
                                     </div>
-                                    <div className="formInput">
+                                    <div className="rd-formInput">
                                         <label>Description</label>
                                         <p>{roomData.desc}</p>
                                     </div>
-                                    <div className="formInput">
+                                    <div className="rd-formInput">
                                         <label>Room Numbers</label>
-                                        {roomData.roomNumbers.map((roomNumber, index) => (
-                                            <div key={index}>
-                                                <p>Room Number: {roomNumber.number}</p>
-                                                {roomNumber.unavailableDates.length > 0 && (
-                                                    <p>Unavailable Dates: {roomNumber.unavailableDates.join(', ')}</p>
-                                                )}
-                                            </div>
-                                        ))}
+                                        {roomData &&
+                                            roomData.roomNumbers.map((roomNumber, index) => (
+                                                <div key={index}>
+                                                    <p>Room Number: {roomNumber.number}</p>
+                                                    {roomNumber.unavailableDates.length > 0 && (
+                                                        <div className="rd-formInput">
+                                                            <label>Unavailable Dates</label>
+                                                            <p>
+                                                                {[...new Set(roomNumber.unavailableDates.map(date => date.slice(0, 10)))].join(", ")}
+                                                            </p>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
                                     </div>
-                                    {/* Add other fields similarly */}
                                 </>
                             )}
                         </form>

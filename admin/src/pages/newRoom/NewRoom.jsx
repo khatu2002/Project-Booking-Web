@@ -86,19 +86,19 @@ const NewRoom = () => {
 
   console.log(info)
   return (
-    <div className="new">
+    <div className="nr-new">
       <Sidebar />
-      <div className="newContainer">
+      <div className="nr-newContainer">
         <Navbar />
-        <div className="top">
+        <div className="nr-top">
           <h1>Add New Room</h1>
         </div>
-        <div className="bottom">
-          <div className="right">
+        <div className="nr-bottom">
+          <div className="nr-right">
             <form>
               {roomInputs.map((input) => (
-                <div className="formInput" key={input.id}>
-                  <label>{input.label}</label>
+                <div className="nr-formInput" key={input.id}>
+                  <label><b>{input.label}</b></label>
                   <input
                     id={input.id}
                     type={input.type}
@@ -108,15 +108,15 @@ const NewRoom = () => {
                   {errors[input.id] && <p style={{ color: 'red' }}>{errors[input.id]}</p>}
                 </div>
               ))}
-              <div className="formInput">
-                <label>Rooms</label>
+              <div className="nr-formInput">
+                <label><b>Rooms</b></label>
                 <textarea
                   onChange={(e) => setRooms(e.target.value)}
-                  placeholder="give comma between room numbers."
+                  placeholder="Give comma between room numbers..."
                 />
               </div>
-              <div className="formInput">
-                <label>Choose a hotel</label>
+              <div className="nr-formInput">
+                <label><b>Choose a hotel</b></label>
                 <select
                   id="hotelId"
                   onChange={(e) => setHotelId(e.target.value)}

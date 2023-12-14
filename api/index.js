@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 import swaggerUi from "swagger-ui-express";
 import yaml from "yamljs";
 import cors from "cors";
-import reservationRoute from "./routes/reservation.js"
+//import reservationRoute from "./routes/reservation.js"
 
 const swaggerSpec = yaml.load("./swagger/booking-swagger.yaml"); // Thay đổi đường dẫn của tài liệu Swagger YAML nếu cần thiết
 const app = express();
@@ -37,7 +37,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
-app.use("/api/reservation", reservationRoute);
+//app.use("/api/reservation", reservationRoute);
 // Đăng ký tài liệu Swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 

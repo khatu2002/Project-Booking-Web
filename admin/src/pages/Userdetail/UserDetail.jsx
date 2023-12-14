@@ -23,49 +23,48 @@ const UserDetail = () => {
     }, [userId]);
 
     return (
-        <div className="new"> {/* Adjust the class name as needed */}
+        <div className="d-new"> {/* Adjust the class name as needed */}
             <Sidebar />
-            <div className="newContainer"> {/* Adjust the class name as needed */}
+            <div className="d-newContainer"> {/* Adjust the class name as needed */}
                 <Navbar />
-                <div className="top">
+                <div className="d-top">
                     <h1>{userData ? userData.username : "Loading..."}</h1>
                 </div>
-                <div className="bottom">
-                    <div className="left">
+                <div className="d-bottom">
+                    <div className="d-left">
                         <img
                             src={userData && userData.img ? userData.img : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"}
                             alt=""
                         />
                     </div>
-                    <div className="right">
+                    <div className="d-right">
                         <form>
                             {userData && (
                                 <>
-                                    <div className="formInput">
-                                        <label>Username</label>
+                                    <div className="d-formInput">
+                                        <label><b>Username</b></label>
                                         <p>{userData.username}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Email</label>
+                                    <div className="d-formInput">
+                                        <label><b>Email</b></label>
                                         <p>{userData.email}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Country</label>
+                                    <div className="d-formInput">
+                                        <label><b>Country</b></label>
                                         <p>{userData.country}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>City</label>
+                                    <div className="d-formInput">
+                                        <label><b>City</b></label>
                                         <p>{userData.city}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Phone</label>
+                                    <div className="d-formInput">
+                                        <label><b>Phone</b></label>
                                         <p>{userData.phone}</p>
                                     </div>
-                                    <div className="formInput">
-                                        <label>Is Admin</label>
+                                    <div className="d-formInput">
+                                        <label><b>Is Admin</b></label>
                                         <p>{userData.isAdmin ? "Yes" : "No"}</p>
                                     </div>
-                                    {/* Add other fields similarly */}
                                 </>
                             )}
                         </form>

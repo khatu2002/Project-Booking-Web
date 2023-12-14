@@ -20,11 +20,13 @@
 
       .left {
         flex: 1;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
-          width: 100px;
-          height: 100px;
+          width: 200px;
+          height: 200px;
           border-radius: 50%;
           object-fit: cover;
         }
@@ -32,16 +34,19 @@
 
       .right {
         flex: 2;
+        display: flex;
+        flex-direction: column;
         padding: 0px 20px;
+        align-items: flex-end;
 
         form {
           display: flex;
-          flex-wrap: wrap;
+          flex-direction: column;
           gap: 30px;
-          justify-content: space-between;
+          width: 100%;
 
           .formInput {
-            width: 40%;
+            width: 100%;
 
             label {
               display: flex;
@@ -54,7 +59,7 @@
             }
 
             input {
-              width: 100%;
+              width: calc(100% - 40px);
               padding: 5px;
               border: none;
               border-bottom: 1px solid gray;
@@ -70,6 +75,7 @@
             font-weight: bold;
             cursor: pointer;
             margin-top: 10px;
+            align-self: flex-end;
           }
         }
       }
